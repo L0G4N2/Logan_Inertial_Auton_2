@@ -21,9 +21,9 @@ int main() {
     wait(100, msec);
   }
   Drivetrain.setDriveVelocity(85, percent);
-  //Drive forward for 1.5 seconds
+  //Drive forward for 0.5 seconds
   Drivetrain.drive(forward);
-  wait(1500, msec);
+  wait(700, msec);
   Drivetrain.stop();
   //90 degree turn with inertial sensor
   Drivetrain.turn(right);
@@ -42,4 +42,9 @@ int main() {
   wait(0.5, seconds);
   Drivetrain.stop();
   wait(1, seconds);
+  Drivetrain.setDriveVelocity(50, pct);
+  //Drive forward for 0.7 seconds
+  Drivetrain.drive(reverse);
+  wait(700, msec);
+  Drivetrain.stop();
 }
